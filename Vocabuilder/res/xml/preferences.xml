@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="filter_by"
+        android:title="@string/testMode" >
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/testModeNames"
+            android:entryValues="@array/testModeVals"
+            android:key="PREF_TESTING_MODE"
+            android:title="@string/testModePref" />
+    </PreferenceCategory>
+
+    <CheckBoxPreference
+        android:key="PREF_SPEAK_RESPONSES"
+        android:title="@string/speak"
+        android:persistent="true" />
+
+</PreferenceScreen>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F2CDA4"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvStatsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/veryGood"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000099"
+        android:textSize="25dp"
+        android:textStyle="bold|italic"
+        android:typeface="serif" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp" >
+
+                <TextView
+                    android:id="@+id/tvResults"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="TextView"
+                    android:textColor="#000099"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:typeface="normal" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="@string/score"
+                    android:textColor="#000099"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="@string/prevBest"
+                    android:textColor="#000099"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="TextView"
+                    android:textColor="#000099"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/tvBestScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="TextView"
+                    android:textColor="#000099"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:typeface="normal" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="TextView"
+                    android:textColor="#000099"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/tvBestTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="TextView"
+                    android:textColor="#000099"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:typeface="normal" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/retest"
+            android:textColor="#000099"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </LinearLayout>
+
+</LinearLayout>

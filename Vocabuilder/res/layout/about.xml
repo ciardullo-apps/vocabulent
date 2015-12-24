@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aboutLayout"
+    android:layout_width="250dp"
+    android:layout_height="fill_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical" 
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/aboutList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|left"
+                    android:paddingBottom="6dp"
+                    android:text="@string/full_app_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="8pt" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|left"
+                    android:paddingBottom="6dp"
+                    android:text="@string/aboutApp"
+                    android:textColor="@android:color/black"
+                    android:textSize="6pt" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|left"
+                    android:paddingBottom="6dp"
+                    android:text="@string/msgDatabaseStats"
+                    android:textColor="@android:color/black"
+                    android:textSize="4pt" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|center"
+                    android:paddingTop="6dp"
+                    android:text="@string/aboutCopyright"
+                    android:textColor="@android:color/black"
+                    android:textSize="4pt" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnOk"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="@string/ok" />
+
+    </LinearLayout>
+
+</LinearLayout>
