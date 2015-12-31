@@ -23,22 +23,6 @@ public class ScoreboardDAO extends AbstractDAO {
 		COLUMN_BEST_SCORE
 	};
 
-//	private static String SQL_ALL_STATS =
-//	" select a._id as album_id, s._id as _id, ad.lkup_name as album_desc, sd.lkup_name as lkup_name, times_tested as times_tested, " + 
-//	" best_time_in_sec || ' sec' as best_time_in_sec, best_score || '%' as best_score " +
-//	" from album a, scene s, scoreboard r, albumdesc ad, " + 
-//	" scenedesc sd, iab i, iab_asset ia " +
-//	" where a._id = s.album_id and " +
-//	" ad._id = a._id and " +
-//	" sd._id = s._id and " +
-//	" a._id = r.album_id and " +
-//	" s._id = r.scene_id and " +
-//	" s.purchase_level = ia.purchase_level and " +
-//	" ia._id = i._id and " +
-//	" ad.lang_cd = ? and " +
-//	" sd.lang_cd = ? " +
-//	" order by album_desc, r.best_score desc, r.times_tested desc";
-
 	private static String SQL_ALL_STATS =
 		" SELECT a._id as album_id, s._id as _id, ad.lkup_name as album_desc, sd.lkup_name as lkup_name, ifnull(times_tested, 0) as times_tested, " + 
 		" ifnull(best_time_in_sec, '-') || ' sec' as best_time_in_sec, ifnull(best_score, 0) || '%' as best_score " +
@@ -80,7 +64,6 @@ public class ScoreboardDAO extends AbstractDAO {
 		if(n >= rc.getPrev_best_time_in_sec() && rc.getPrev_best_time_in_sec() > 0)
 			n = rc.getPrev_best_time_in_sec();
 		values.put(COLUMN_BEST_TIME_IN_SEC, n);
-//		Log.e("Hello", "Saving " + rc.toString());
 		SQLiteDatabase db = null;
 		try {
 			dbHelper.close();

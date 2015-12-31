@@ -265,9 +265,6 @@ public abstract class SceneView extends View implements AppConstants, TextToSpee
 
 	@Override
 	protected void onDraw(Canvas canvas) {
-		// TODO Before deployment, put a log message here to make sure there's no loop
-		//Log.e("HELLO", "########## " + System.currentTimeMillis());
-		// canvas.drawColor(0xFFAAAAAA);
 		if(mBitmap != null) {
 			canvas.drawBitmap(mBitmap, matrix, paint);
 			setLayoutParams(layoutParams);
@@ -344,31 +341,6 @@ public abstract class SceneView extends View implements AppConstants, TextToSpee
 
 		// Display answer depending on location of ImageView
 
-		// Margins do not work in Gingerbread
-//		int leftMargin = 0, topMargin = 0;
-//		if(viewHotzone.right < getWidth()/1.5) {
-//			Log.e("Hello", "LEFT");
-//			leftMargin = viewHotzone.right;
-//		} else {
-//			Log.e("Hello", "RIGHT");
-//			int sz = viewHotzone.right - viewHotzone.left;
-//			if(sz < 100)
-//				leftMargin = 150;
-//			else
-//				leftMargin = 10;
-//		}
-//		if(viewHotzone.bottom < getHeight()/2) {
-//			Log.e("Hello", "TOP");
-//			topMargin = viewHotzone.bottom;
-//		} else {
-//			Log.e("Hello", "BOTTOM");
-//			if(getHeight() - viewHotzone.top < 100)
-//				topMargin = viewHotzone.top - 50;
-//			else
-//				topMargin = viewHotzone.top;
-//		}
-//		tvLayoutParams.setMargins(leftMargin, topMargin, 0, 0);
-//		tvAnswer.setLayoutParams(tvLayoutParams);
 		postHighlightHotzone(viewHotzone);
 }
 
@@ -515,60 +487,42 @@ public abstract class SceneView extends View implements AppConstants, TextToSpee
 		int n = Gravity.NO_GRAVITY;
 
 		if(topLeftZone.contains(viewHotzone)) {
-//			Log.e("Hello", "TOP LEFT");
 			n = Gravity.CENTER | Gravity.TOP;
 		} else if(bottomLeftZone.contains(viewHotzone)) {
-//			Log.e("Hello", "BOTTOM LEFT");
 			n = Gravity.CENTER | Gravity.BOTTOM;
 		} else if(centerLeftZone.contains(viewHotzone)) {
-//			Log.e("Hello", "CENTER LEFT");
 			n = Gravity.CENTER;
 		} else if(topMiddleZone.contains(viewHotzone)) {
-//			Log.e("Hello", "TOP MIDDLE");
 			n = Gravity.CENTER;
 		} else if(bottomMiddleZone.contains(viewHotzone)) {
-//			Log.e("Hello", "BOTTOM MIDDLE");
 			n = Gravity.CENTER;
 		} else if(centerMiddleZone.contains(viewHotzone)) {
-//			Log.e("Hello", "CENTER MIDDLE");
 			n = Gravity.CENTER | Gravity.TOP;
 		} else if(topRightZone.contains(viewHotzone)) {
-//			Log.e("Hello", "TOP RIGHT");
 			n = Gravity.CENTER | Gravity.TOP;
 		} else if(bottomRightZone.contains(viewHotzone)) {
-//			Log.e("Hello", "BOTTOM RIGHT");
 			n = Gravity.CENTER | Gravity.BOTTOM;
 		} else if(centerRightZone.contains(viewHotzone)) {
-//			Log.e("Hello", "CENTER RIGHT");
 			n = Gravity.CENTER;
 		} else {
 			// It's not contained in one of the nine zones. Try intersects
 			if(Rect.intersects(topLeftZone, viewHotzone)) {
-//				Log.e("Hello", "INTERSECTS TOP LEFT");
 				n = Gravity.RIGHT | Gravity.TOP;
 			} else if(Rect.intersects(bottomLeftZone, viewHotzone)) {
-//				Log.e("Hello", "INTERSECTS BOTTOM LEFT");
 				n = Gravity.RIGHT | Gravity.BOTTOM;
 			} else if(Rect.intersects(centerLeftZone, viewHotzone)) {
-//				Log.e("Hello", "INTERSECTS CENTER LEFT");
 				n = Gravity.RIGHT | Gravity.CENTER;
 			} else if(Rect.intersects(topRightZone, viewHotzone)) {
-//				Log.e("Hello", "INTERSECTS TOP RIGHT");
 				n = Gravity.LEFT | Gravity.TOP;
 			} else if(Rect.intersects(bottomRightZone, viewHotzone)) {
-//				Log.e("Hello", "INTERSECTS BOTTOM RIGHT");
 				n = Gravity.LEFT | Gravity.BOTTOM;
 			} else if(Rect.intersects(centerRightZone, viewHotzone)) {
-//				Log.e("Hello", "INTERSECTS CENTER RIGHT");
 				n = Gravity.LEFT | Gravity.CENTER;
 			} else if(Rect.intersects(topMiddleZone, viewHotzone)) {
-//				Log.e("Hello", "INTERSECTS TOP MIDDLE");
 				n = Gravity.BOTTOM | Gravity.CENTER;
 			} else if(Rect.intersects(bottomMiddleZone, viewHotzone)) {
-//				Log.e("Hello", "INTERSECTS BOTTOM MIDDLE");
 				n = Gravity.TOP | Gravity.CENTER;
 			} else if(Rect.intersects(centerMiddleZone, viewHotzone)) {
-//				Log.e("Hello", "INTERSECTS CENTER MIDDLE");
 				n = Gravity.CENTER | Gravity.TOP;
 			}
 		}
@@ -592,8 +546,6 @@ public abstract class SceneView extends View implements AppConstants, TextToSpee
 
 		ivHotzone.setVisibility(View.INVISIBLE);
 		tvAnswer.setVisibility(View.INVISIBLE);
-
-//		tvAnswer.setText("");
 
 		setBackgroundColor(bgColor);
 		invalidate();

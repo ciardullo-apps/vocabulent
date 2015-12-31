@@ -82,7 +82,6 @@ public class TrainingView extends SceneView {
 				if(viewHotzone.contains(x, y)) {
 					// This hotzone was touched
 					hotzone = h;
-//					Log.e("HELLO", "Hotzone touched!");
 					break;
 				}
 			}
@@ -96,7 +95,6 @@ public class TrainingView extends SceneView {
 					selectedHotzone = hotzone;
 
 					// Dim the View, made possible via the magic of transparency
-//					setBackgroundColor(Color.GRAY);
 					setBackgroundColor(dimColor);
 					
 					// Redraw the View
@@ -104,7 +102,6 @@ public class TrainingView extends SceneView {
 				}
 			} else {
 				// Touch was out of a hotzone. Clear previous hotzone and redraw.
-//				Log.e("HELLO", "ALL CLEAR!");
 
 				if(selectedHotzone != null) {
 					offHotzone();

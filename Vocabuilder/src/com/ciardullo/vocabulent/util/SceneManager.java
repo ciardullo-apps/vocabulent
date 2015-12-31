@@ -92,8 +92,6 @@ public class SceneManager {
 					album.setAllScenes(albumScenes);
 					
 				} while (cursor.moveToNext());
-			} else {
-//				Log.e("Load Albums", "No albums found in the database");
 			}
 		} catch (Exception e) {
 			Log.e("SceneManager.loadAlbums() exception", e.toString());
@@ -146,8 +144,6 @@ public class SceneManager {
 					scene.setAllHotzones(hotzones);
 					incrementCountOfLoadedScenes();
 				} while (cursor.moveToNext());
-			} else {
-//				Log.e("Load Scenes", "No scenes found for album " + albumId);
 			}
 		} catch (Exception e) {
 			// Throws CursorIndexOutOfBoundsException when an album has no scenes
@@ -196,8 +192,6 @@ public class SceneManager {
 							pointLeft, pointTop, pointRight, pointBottom, hotDesc);
 					hotzones.add(hotzone);
 				} while (cursor.moveToNext());
-			} else {
-//				Log.e("Load Hotzones", "No hotzones found for scene " + sceneId);
 			}
 		} catch (Exception e) {
 			Log.e("SceneManager.loadHotzonesForScene() exception", e.toString());

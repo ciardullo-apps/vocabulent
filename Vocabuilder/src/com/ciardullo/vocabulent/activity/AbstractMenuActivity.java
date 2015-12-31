@@ -137,11 +137,6 @@ public class AbstractMenuActivity extends Activity implements AppConstants {
 						removeDialog(DIALOG_ABOUT);
 					}
 				});
-
-				// createAboutBoxDialog(purchasedItems,
-				// null,
-				// (ViewGroup) findViewById(R.id.aboutLayout),
-				// R.id.aboutList);
 			} finally {
 				if (dao != null) {
 					dao.close();

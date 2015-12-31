@@ -12,11 +12,6 @@ import com.ciardullo.vocabulent.vo.Scene;
  */
 public class LoadScenesDAO extends LoadLookupTableDAO {
 
-//	private static final String GET_SCENES = "select v.lkup_name as lkup_name, v._id as _id, " +
-//			"v.scene_image_name as scene_image_name, vd.lkup_name as album_desc, " + 
-//			" i._id as iab_id from scene v, scenedesc vd, iab i, iab_asset a ";
-	// If iab._id as locked returns null, show the scene, but lock it out.
-	// It has not been purchased
 	private static final String GET_SCENES = " SELECT " + 
 		" v.lkup_name as lkup_name, " +
 		" v._id as _id, " +
@@ -30,9 +25,6 @@ public class LoadScenesDAO extends LoadLookupTableDAO {
 	
 	private String[] selectionArgs;
 
-//	private static String WHERE_CLAUSE = "where i._id = a._id and " + 
-//			" v.purchase_level = a.purchase_level and " +
-//			"v._id = vd._id and ";
 	private static String SELECT_ALBUM_ID = " WHERE album_id = ";
 	private static String SELECT_LANG_CD = " vd.lang_cd = ";
 	private static String ORDER_BY = "order by ";
@@ -64,9 +56,6 @@ public class LoadScenesDAO extends LoadLookupTableDAO {
 
 	@Override
 	public String getSelection() {
-//		StringBuffer sb = new StringBuffer();
-//		sb.append(WHERE_CLAUSE);
-//		return sb.toString();
 		return "";
 	}
 	

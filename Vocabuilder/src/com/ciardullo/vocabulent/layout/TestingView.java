@@ -114,7 +114,6 @@ public class TestingView extends SceneView {
 					if(viewHotzone.contains(x, y)) {
 						// This hotzone was touched
 						hotzone = h;
-//						Log.e("HELLO", "Hotzone touched!");
 						break;
 					}
 				}
@@ -142,7 +141,6 @@ public class TestingView extends SceneView {
 					else
 						g = Gravity.LEFT | Gravity.TOP;
 					layoutParams.gravity = g;
-//					tvAnswer.setLayoutParams(layoutParams);
 				}
 
 				// Redraw the View
@@ -162,15 +160,7 @@ public class TestingView extends SceneView {
 	protected boolean preHighlightHotzone() {
 		// Return true if anything was touched
 		boolean b = true;
-		if(selectedHotzone != null) {
-//			if(compareHotzone != null) {
-//				if(!selectedHotzone.equals(compareHotzone)) {
-//					compareHotzone = selectedHotzone;
-//				}
-//			} else {
-//				Toast.makeText(getContext(), "ALL DONE NOW", Toast.LENGTH_SHORT);
-//			}
-		} else {
+		if(selectedHotzone == null) {
 			b = false;
 		}
 
@@ -268,9 +258,6 @@ public class TestingView extends SceneView {
 
 		super.renderTheScene(displayWidth, displayHeight);
 
-//		if(!isInEditMode()) {
-//			tvAnswer.setVisibility(getAnswerVisibility());
-//		}
 		if(PREF_TESTING_MODE_MULTIPLE_CHOICE.equals(testMode)) {
 			renderMultipleChoice();
 		}

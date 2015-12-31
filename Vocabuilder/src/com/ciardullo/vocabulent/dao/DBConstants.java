@@ -54,11 +54,6 @@ public interface DBConstants {
     public static final String IAB_QUANTITY_COL = "quantity";
     public static final String IAB_PRODUCT_DESC_COL = "description";
 
-//	public static final String SQL_SCENE_COUNT = "SELECT count(*) " +
-//			"from album v, iab i, iab_asset a, scene s " +
-//			"where v._id = s.album_id and " + 
-//			"i._id = a._id and s.purchase_level = a.purchase_level ";
-
 	public static final String SQL_SCENE_COUNT = "SELECT count(*) "
 			+ " FROM scene s " + " JOIN album v ON v._id = s.album_id "
 			+ " JOIN iab_asset a ON s.purchase_level = a.purchase_level "

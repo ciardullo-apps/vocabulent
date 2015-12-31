@@ -114,19 +114,6 @@ public class SelectSceneActivity extends AbstractLoadSceneActivity implements
 							SceneUtil.getImageResourceId(R.drawable.class,
 									album.getImageName())));
 
-			// method 2 LinearLayout
-			// View viewTab = View.inflate(SelectSceneActivity.this,
-			// R.layout.mini_scene, null);
-			// ImageView ivTab =
-			// (ImageView)viewTab.findViewById(R.id.ivMiniScene);
-			// ivTab.setImageDrawable(getResources().getDrawable(
-			// SceneUtil.getImageResourceId(R.drawable.class,
-			// album.getImageName())));
-			// TextView tvTab =
-			// (TextView)viewTab.findViewById(R.id.tvMiniScene);
-			// tvTab.setText(album.getAlbumDesc());
-			// tabSpec.setIndicator(viewTab);
-
 			// Render the image gallery of scenes in a GridView
 			tabSpec.setContent(new TabHost.TabContentFactory() {
 				public View createTabContent(String tag) {

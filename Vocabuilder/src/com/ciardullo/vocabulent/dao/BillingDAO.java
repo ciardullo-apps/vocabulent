@@ -103,8 +103,6 @@ public class BillingDAO extends AbstractDAO {
 	 * "purchased items" table.
 	 */
 	public Cursor queryAllPurchasedItems() {
-//		return dbHelper.getDatabase().query(TBL_NM_PURCHASE,
-//				allPurchaseColumns, null, null, null, null, null);
 		return dbHelper.getDatabase().rawQuery(
 				"select a._id, a.quantity, b.description from iab a, iab_asset b where a._id = b._id order by b.purchase_level" , 
 				null);

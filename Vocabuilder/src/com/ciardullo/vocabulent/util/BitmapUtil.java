@@ -74,19 +74,6 @@ public class BitmapUtil {
 			}
 		}
 		
-		// Android docs state that best values are powers of 2
-//		if(((inSampleSize>2) && (inSampleSize&(inSampleSize-1))==0)) {
-//			;
-//		} else {
-//			// Round up to the next power of two
-//			inSampleSize--;
-//			inSampleSize |= inSampleSize >> 1;
-//			inSampleSize |= inSampleSize >> 2;
-//			inSampleSize |= inSampleSize >> 4;
-//			inSampleSize |= inSampleSize >> 8;
-//			inSampleSize |= inSampleSize >> 16;
-//			inSampleSize++;
-//		}
 		return inSampleSize;
 	}
 

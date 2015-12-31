@@ -137,14 +137,7 @@ public class BillingActivity extends Activity implements OnClickListener,
 		public void onRequestPurchaseResponse(RequestPurchase request,
 				ResponseCode responseCode) {
 			if (responseCode == ResponseCode.RESULT_OK) {
-//				logProductActivity(request.mProductId,
-//						"sending purchase request");
-			} else if (responseCode == ResponseCode.RESULT_USER_CANCELED) {
-//				logProductActivity(request.mProductId,
-//						"dismissed purchase dialog");
-			} else {
-//				logProductActivity(request.mProductId,
-//						"request purchase returned " + responseCode);
+				;
 			}
 		}
 
@@ -159,7 +152,6 @@ public class BillingActivity extends Activity implements OnClickListener,
 				if (!prefs.getBoolean(PREF_INIT_DONE, false)) {
 					// One-time initialization code, after
 					// installing or clearing application data
-//					Log.e("Hello", "Saving preference for restore transactions");
 					SharedPreferences.Editor edit = prefs.edit();
 					edit.putBoolean(PREF_INIT_DONE, true);
 					edit.commit();

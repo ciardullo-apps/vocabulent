@@ -29,7 +29,6 @@ public class VocabulentDBHelper extends SQLiteOpenHelper implements DBConstants 
 	public void createDatabase() throws IOException {
 		boolean dbExist = checkDataBase();
 		if(!dbExist) {
-//			Log.i(ConjugatorDBHelper.class.getName(), "Creating database " + DATABASE_NAME);
 			this.getReadableDatabase();
 			try {
 				copyDatabase();
@@ -37,21 +36,15 @@ public class VocabulentDBHelper extends SQLiteOpenHelper implements DBConstants 
 				String s = e.getMessage();
 				String t = e.getMessage();
 			}
-		} else {
-//			Log.i(ConjugatorDBHelper.class.getName(), "Found existing database " + DATABASE_NAME);
 		}
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-//		Log.i(ConjugatorDBHelper.class.getName(), "onCreate() called");
-//		db.execSQL(CREATE_TBL_EXPRESSION_SQL);
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-//		Log.i(ConjugatorDBHelper.class.getName(), "onUpgrade() called");
-//		db.execSQL(DROP_TBL_EXPRESSION_SQL);
 	}
 
 	/**
